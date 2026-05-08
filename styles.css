@@ -1,0 +1,84 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template: auto 1fr / 1fr 3fr 1fr;
+    grid-template-areas:
+    "nav header header"
+    "nav main aside";
+    border: 1px solid red;
+}
+
+/* ==================== HEADER ==================== */
+
+header {
+    grid-area: header;
+    background-color: aquamarine;
+}
+
+.header-top-wrap {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+}
+
+.header-top-right {
+    display: flex;
+}
+
+.user-info {
+    display: flex;
+}
+
+/* ==================== SIDEBAR ==================== */
+
+nav {
+    grid-area: nav;
+    background-color: darkslateblue;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+main {
+    grid-area: main;
+    background-color: cadetblue;
+}
+
+aside {
+    grid-area: aside;
+    background-color: darkseagreen;
+}
