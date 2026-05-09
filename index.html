@@ -14,15 +14,15 @@
         <header>
             <div class="header-top-wrap">
                 <!-- <button id="menu-toggle">menutoggle</button> -->
-                <div class="search-bar">
+                <div class="header-search-bar">
                     <input type="text" placeholder="search">
                 </div>
                 <div class="header-top-right">
-                    <button class="icon-btn" id="theme-toggle">
-                        <svg class="icon"><use href="/svg/feather-sprite.svg#moon"></svg>
+                    <button class="header-top-btn" id="theme-toggle">
+                        <svg class="header-top-icon"><use href="/svg/feather-sprite.svg#moon"></svg>
                     </button>
-                    <button class="icon-btn" id="notifications">
-                        <svg class="icon"><use href="/svg/feather-sprite.svg#bell"></svg>
+                    <button class="header-top-btn" id="notifications">
+                        <svg class="header-top-icon"><use href="/svg/feather-sprite.svg#bell"></svg>
                         <span class="notification-badge">3</span>
                     </button>
                     <div class="user-info">
@@ -32,7 +32,12 @@
                 </div>
             </div>
             <div class="header-bottom-wrap">
-                header bottom wrap
+                <h2>Welcome username</h2>
+                <div class="header-bottom-right">
+                    <button class="header-bottom-btn"><svg class="header-bottom-icon"><use href="/svg/feather-sprite.svg#share-2"></svg>Share</button>
+                    <button class="header-bottom-btn"><svg class="header-bottom-icon"><use href="/svg/feather-sprite.svg#upload"></svg>Export</button>
+                    <button class="header-bottom-btn"><svg class="header-bottom-icon"><use href="/svg/feather-sprite.svg#plus"></svg>Add new</button>
+                </div>
             </div>
         </header>
         <!-- sidebar -->
@@ -42,17 +47,19 @@
             </div>
             <div class="nav-menu">
                 <ul class="links">
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#grid"></svg>dashboard</a></li>
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#check-square"></svg>tasks</a></li>
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#folder"></svg>projects</a></li>
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#calendar"></svg>calendar</a></li>
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#message-square"></svg>messages</a></li>
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#users"></svg>teams</a></li>                      
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#grid"></svg>dashboard</a></li>
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#list"></svg>tasks</a></li>
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#folder"></svg>projects</a></li>
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#calendar"></svg>calendar</a></li>
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#users"></svg>teams</a></li> 
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#message-circle"></svg>messages</a></li>
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#edit"></svg>notes</a></li> 
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#file-text"></svg>reports</a></li>                      
                 </ul>
                 <hr>
                 <ul class="links">
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#settings"></svg>settings</a></li>
-                    <li><a href="#"><svg class="icon"><use href="/svg/feather-sprite.svg#help-circle"></svg>support</a></li>                     
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#settings"></svg>settings</a></li>
+                    <li><a href="#"><svg class="nav-icon"><use href="/svg/feather-sprite.svg#help-circle"></svg>support</a></li>                     
                 </ul>
             </div>
         </nav>

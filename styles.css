@@ -18,7 +18,7 @@ body {
 .container {
     height: 100%;
     display: grid;
-    grid-template: auto 1fr / 1fr 3fr 1fr;
+    grid-template: auto 1fr / 0.8fr 3fr 1fr;
     grid-template-areas:
     "nav header header"
     "nav main aside";
@@ -37,14 +37,14 @@ header {
     grid-template-columns: 1fr auto;
 }
 
-.search-bar {
+.header-search-bar {
     display: flex;
     align-items: center;
     max-width: 600px;
     width: 100%;
 }
 
-.search-bar input {
+.header-search-bar input {
     width: 100%;
 }
 
@@ -52,8 +52,24 @@ header {
     display: flex;
 }
 
-.user-info {
+.header-top-icon,
+.header-bottom-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.header-user-info {
     display: flex;
+}
+
+.header-bottom-wrap {
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 /* ==================== SIDEBAR ==================== */
@@ -63,14 +79,14 @@ nav {
     background-color: darkslateblue;
 }
 
-.icon {
-  width: 24px;
-  height: 24px;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  fill: none;
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 }
 
 main {
