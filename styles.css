@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Inter Variable";
+    src: url("/fonts/Inter-Variable.woff2") format("woff2-variations");
+    font-weight: 100 900;
+    font-stretch: 50% 150%;
+    font-display: swap;
+}
+
 *, *:before, *:after {
     margin: 0;
     padding: 0;
@@ -7,12 +15,25 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 
+ul, ol {
+    list-style: none;
+}
+
+/* ==================== VARIABLES ==================== */
+
+:root {
+    --example: red;
+}
+
+/* ==================== BASE ==================== */
 
 body {
     height: 100vh;
+    font-family: "Inter Variable";
+    line-height: 1.4;
 }
 
 .container {
@@ -22,7 +43,6 @@ body {
     grid-template-areas:
     "nav header header"
     "nav main aside";
-    border: 1px solid red;
 }
 
 /* ==================== HEADER ==================== */
@@ -75,9 +95,42 @@ header {
 
 /* ==================== SIDEBAR ==================== */
 
-nav {
+.sidebar-nav {
     grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    padding: 10px;
     background-color: darkslateblue;
+}
+
+.logo span {
+    font-family: "Urbanist";
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.nav-menu {
+    display: grid;
+    gap: 24px;
+}
+
+.nav-links {
+    display: grid;
+    gap: 4px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.nav-links a:hover {
+    background-color: beige;
 }
 
 .nav-icon {
@@ -199,7 +252,7 @@ aside {
     grid-template: auto auto / 1fr auto;
 }
 
-/* ==================== announcements ==================== */
+/* ==================== messages ==================== */
 
 .messages-list li {
     display: grid;
