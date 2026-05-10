@@ -44,6 +44,8 @@ ul, ol {
     --c-secondary-light: #feeaa5;
     --c-secondary-dark: #fdb137;
 
+    --c-red: red;
+
     --c-opacity: 0.85;
 
     --c-background: var(--c-grey-50);
@@ -127,6 +129,7 @@ header {
     display: grid;
     align-items: center;
     max-width: 600px;
+    margin-right: 8px;
 }
 
 .header-search-bar input {
@@ -163,7 +166,19 @@ header {
 
 .notifications span {
     position: absolute;
-    color: #fdb137;
+    margin-top: -20px;
+    margin-right: -20px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12px;
+    width: 16px;
+    border-radius: 10px;;
+    font-size: 10px;
+    font-weight: 400;
+    background-color: var(--c-red);
+    color: var(--c-white);
 }
 
 .header-top-icon,
