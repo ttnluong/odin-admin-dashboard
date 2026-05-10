@@ -32,13 +32,13 @@ header {
     background-color: aquamarine;
 }
 
-.header-top-wrap {
+.header-wrap-top {
     display: grid;
     grid-template-columns: 1fr auto;
 }
 
 .header-search-bar {
-    display: flex;
+    display: grid;
     align-items: center;
     max-width: 600px;
     width: 100%;
@@ -48,7 +48,7 @@ header {
     width: 100%;
 }
 
-.header-top-right {
+.header-wrap-top-btns {
     display: flex;
 }
 
@@ -64,10 +64,11 @@ header {
 }
 
 .header-user-info {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
-.header-bottom-wrap {
+.header-wrap-bottom {
     display: grid;
     grid-template-columns: 1fr auto;
 }
@@ -89,10 +90,101 @@ nav {
     fill: none;
 }
 
+/* ==================== MAIN ==================== */
+
 main {
     grid-area: main;
     background-color: cadetblue;
 }
+
+main .section-title {
+    grid-column: 1 / -1;
+}
+
+/* ==================== stats ==================== */
+
+.main-section-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.stat-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.stat-card a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.stat-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* ==================== projects ==================== */
+
+.main-section-projects {
+    display: grid;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr))
+}
+
+.project-card {
+    display: grid;
+}
+
+.project-card-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.project-option-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.project-card-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.project-stat-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.project-button-icon {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* ==================== ASIDE ==================== */
 
 aside {
     grid-area: aside;

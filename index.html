@@ -12,28 +12,26 @@
     <div class="container">
         <!-- header -->
         <header>
-            <div class="header-top-wrap">
+            <div class="header-wrap-top">
                 <!-- <button id="menu-toggle">menutoggle</button> -->
                 <div class="header-search-bar">
                     <input type="text" placeholder="search">
                 </div>
-                <div class="header-top-right">
-                    <button class="header-top-btn" id="theme-toggle">
-                        <svg class="header-top-icon"><use href="/svg/feather-sprite.svg#moon"></svg>
-                    </button>
+                <div class="header-wrap-top-btns">
+                    <button class="header-top-btn" id="theme-toggle"><svg class="header-top-icon"><use href="/svg/feather-sprite.svg#moon"></svg></button>
                     <button class="header-top-btn" id="notifications">
                         <svg class="header-top-icon"><use href="/svg/feather-sprite.svg#bell"></svg>
                         <span class="notification-badge">3</span>
                     </button>
-                    <div class="user-info">
+                    <div class="header-user-info">
                         <img src="example.jpg" class="avatar">  <!-- add alt -->
                         <p>User Name</p>
                     </div>
                 </div>
             </div>
-            <div class="header-bottom-wrap">
+            <div class="header-wrap-bottom">
                 <h2>Welcome username</h2>
-                <div class="header-bottom-right">
+                <div class="header-wrap-bottom-btns">
                     <button class="header-bottom-btn"><svg class="header-bottom-icon"><use href="/svg/feather-sprite.svg#share-2"></svg>Share</button>
                     <button class="header-bottom-btn"><svg class="header-bottom-icon"><use href="/svg/feather-sprite.svg#upload"></svg>Export</button>
                     <button class="header-bottom-btn"><svg class="header-bottom-icon"><use href="/svg/feather-sprite.svg#plus"></svg>Add new</button>
@@ -65,7 +63,99 @@
         </nav>
         <!-- main -->
          <main>
-            main
+            <section class="main-section-stats">
+                <div class="stat-card">
+                    <svg class="stat-icon"><use href="/svg/feather-sprite.svg#check-circle"></svg>
+                    <div class="stat-text"><a href="#"></a><p>Active projects</p></a><h3>4</h3></div>
+                </div>
+                <div class="stat-card">
+                    <svg class="stat-icon"><use href="/svg/feather-sprite.svg#refresh-ccw"></svg>
+                    <div class="stat-text"><a href="#"></a><p>Ongoing projects</p></a><h3>4</h3></div>
+                </div>
+                <div class="stat-card">
+                    <svg class="stat-icon"><use href="/svg/feather-sprite.svg#clock"></svg>
+                    <div class="stat-text"><a href="#"></a><p>Pending projects</p></a><h3>4</h3></div>
+                </div>
+                <div class="stat-card">
+                    <svg class="stat-icon"><use href="/svg/feather-sprite.svg#alert-circle"></svg>
+                    <div class="stat-text"><a href="#"></a><p>Due tasks</p></a><h3>4</h3></div>
+                </div>
+            </section>
+            <section class="main-section-projects">
+                <h2 class="section-title">Projects</h2>
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-card-tag figma">Figma</span>
+                        <svg class="project-option-icon"><use href="/svg/feather-sprite.svg#more-horizontal"></svg>
+                    </div>
+                    <h3>Project name</h3>
+                    <p>Hier komt wat tekst, ff lang genoeg maken zodat het ook een beetje gaat wrappen</p>
+                    <div class="project-card-footer">
+                        <div class="project-card-stats">
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#list"></svg>12/48</span>
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#users"></svg>5</span>
+                        </div>
+                        <div class="project-card-buttons">
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#github"></svg></button>
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#arrow-up-right"></svg></button>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-card-tag figma">Figma</span>
+                        <svg class="project-option-icon"><use href="/svg/feather-sprite.svg#more-horizontal"></svg>
+                    </div>
+                    <h3>Project name</h3>
+                    <p>Hier komt wat tekst, ff lang genoeg maken zodat het ook een beetje gaat wrappen</p>
+                    <div class="project-card-footer">
+                        <div class="project-card-stats">
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#list"></svg>12/48</span>
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#users"></svg>5</span>
+                        </div>
+                        <div class="project-card-buttons">
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#github"></svg></button>
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#arrow-up-right"></svg></button>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-card-tag figma">Figma</span>
+                        <svg class="project-option-icon"><use href="/svg/feather-sprite.svg#more-horizontal"></svg>
+                    </div>
+                    <h3>Project name</h3>
+                    <p>Hier komt wat tekst, ff lang genoeg maken zodat het ook een beetje gaat wrappen</p>
+                    <div class="project-card-footer">
+                        <div class="project-card-stats">
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#list"></svg>12/48</span>
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#users"></svg>5</span>
+                        </div>
+                        <div class="project-card-buttons">
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#github"></svg></button>
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#arrow-up-right"></svg></button>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <span class="project-card-tag figma">Figma</span>
+                        <svg class="project-option-icon"><use href="/svg/feather-sprite.svg#more-horizontal"></svg>
+                    </div>
+                    <h3>Project name</h3>
+                    <p>Hier komt wat tekst, ff lang genoeg maken zodat het ook een beetje gaat wrappen</p>
+                    <div class="project-card-footer">
+                        <div class="project-card-stats">
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#list"></svg>12/48</span>
+                            <span class="project-card-stat"><svg class="project-stat-icon"><use href="/svg/feather-sprite.svg#users"></svg>5</span>
+                        </div>
+                        <div class="project-card-buttons">
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#github"></svg></button>
+                            <button class="project-card-button"><svg class="project-button-icon"><use href="/svg/feather-sprite.svg#arrow-up-right"></svg></button>
+                        </div>
+                    </div>
+                </article>
+            </section>
          </main>
          <!-- aside -->
          <aside>
