@@ -22,6 +22,10 @@ ul, ol {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* ==================== VARIABLES ==================== */
 
 :root {
@@ -137,6 +141,7 @@ header {
     padding: 8px;
     border: 1px solid var(--c-input-border);
     border-radius: var(--r-input-border);
+    padding-left: 12px;
 }
 
 .header-search-bar input::placeholder {
@@ -161,7 +166,7 @@ header {
 }
 
 .header-bottom-btn {
-    padding-right: 8px;
+    padding-right: 10px;
 }
 
 .notifications span {
@@ -192,9 +197,24 @@ header {
     fill: none;
 }
 
-.header-user-info {
-    display: grid;
-    grid-template-columns: auto auto;
+.header-top-btn.hero p {
+    padding-right: 8px;
+    font-weight: 600;
+    color: var(--c-grey-600);
+}
+
+.hero .initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 28px;
+    margin-left: 3px;
+    background-color: var(--c-primary-dark);
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--c-grey-50);
 }
 
 .header-wrap-bottom {
