@@ -99,6 +99,7 @@ main {
 
 main .section-title {
     grid-column: 1 / -1;
+    margin-bottom: 8px;
 }
 
 /* ==================== stats ==================== */
@@ -189,4 +190,18 @@ main .section-title {
 aside {
     grid-area: aside;
     background-color: darkseagreen;
+}
+
+/* ==================== announcements ==================== */
+
+.activity-list li {
+    display: grid;
+    grid-template: auto auto / 1fr auto;
+}
+
+/* ==================== announcements ==================== */
+
+.messages-list li {
+    display: grid;
+    grid-template: auto auto / 1fr auto;
 }
