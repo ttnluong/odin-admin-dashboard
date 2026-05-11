@@ -97,6 +97,7 @@ button {
     --p-card: var(--spacing-md);
 
     --g-between-cards: var(--spacing-md);
+    --g-between-card-list: var(--spacing-xs);
 
     --radius-sm: 4px;
     --radius-md: 8px;
@@ -107,6 +108,7 @@ button {
     --r-input-border: var(--radius-md);
     --r-btn-border-md: var(--radius-md);
     --r-card-border: var(--radius-md);
+    --r-section-border: var(--radius-lg);
 
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -120,6 +122,7 @@ button {
     --fs-card-title: var(--font-size-md);
     --fs-card-title-sm: var(--font-size-sm);
     --fs-card-body: var(--font-size-md);
+    --fs-card-body-sm: var(--font-size-sm);
     --fs-tag: var(--font-size-xs);
     --fs-card-stat: var(--font-size-sm);
 
@@ -129,8 +132,9 @@ button {
 
 body {
     height: 100vh;
-    font-family: "Inter Variable";
+    font-family: "Inter Variable", sans-serif;
     line-height: 1.4;
+    color: var(--c-text-normal);
 }
 
 .container {
@@ -336,8 +340,6 @@ main .section-title {
 }
 
 .stat-card {
-    width: 100%;
-    position: relative;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
@@ -387,6 +389,7 @@ main .section-title {
     grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--g-between-cards);
     padding: 10px;
+    border-radius: var(--r-section-border);
     background-color: var(--c-foreground);
 }
 
@@ -408,9 +411,9 @@ main .section-title {
 }
 
 .project-card-tag.figma {
-    padding: 4px 8px 4px 8px;
+    padding: 4px 8px;
     border-radius: 16px;
-    background-color: #bebebe;
+    background-color: #e3e3e3;
     font-size: var(--fs-tag);
 }
 
@@ -435,6 +438,7 @@ main .section-title {
 .project-card-footer {
     display: grid;
     grid-template-columns: 1fr auto;
+    align-items: center;
     margin-top: 6px;
     font-size: var(--fs-card-stat);
 }
@@ -460,6 +464,21 @@ main .section-title {
     fill: none;
 }
 
+.project-card-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.project-card-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    width: 28px;
+    border-radius: 14px;
+    border: 1px solid var(--c-btn-border-secondary);
+}
+
 .project-button-icon {
     width: 16px;
     height: 16px;
@@ -474,14 +493,53 @@ main .section-title {
 
 aside {
     grid-area: aside;
-    background-color: darkseagreen;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 12px 12px 4px;
+    background-color: var(--c-background);
+}
+
+aside .section-title {
+    margin-bottom: 2px;
+    font-size: var(--fs-section-title);
 }
 
 /* ==================== announcements ==================== */
 
+.aside-section-activity {
+    display: grid;
+    gap: 14px;
+    padding: 10px;
+    border-radius: var(--r-section-border);
+    background-color: var(--c-foreground);
+}
+
+.activity-list {
+    display: grid;
+    gap: var(--g-between-card-list);
+}
+
 .activity-list li {
     display: grid;
     grid-template: auto auto / 1fr auto;
+    gap: 2px;
+    padding: 8px 14px;
+    border: 1px solid var(--c-card-border);
+    border-radius: var(--r-card-border);
+    background-color: var(--c-foreground);
+}
+
+.activity-list h3 {
+    font-size: var(--fs-card-title-sm);
+}
+
+.activity-list p {
+    font-size: var(--fs-card-body-sm);
+}
+
+.activity-list span {
+    font-size: var(--fs-tag);
 }
 
 /* ==================== messages ==================== */
@@ -492,7 +550,7 @@ aside {
 }
 
 
-@media screen and (max-width : 1000px) {
+@media screen and (width <= 1000px) {
    .main-section-stats { 
     grid-template-columns: repeat(2, minmax(160px, 1fr));
    }
