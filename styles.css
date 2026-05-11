@@ -105,6 +105,12 @@ button {
     --r-input-border: var(--radius-md);
     --r-btn-border-md: var(--radius-md);
     --r-card-border: var(--radius-md);
+
+    --font-size-xs: 10px;
+    --font-size-sm: 13px;
+    --font-size-md: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
 }
 
 /* ==================== BASE ==================== */
@@ -176,6 +182,17 @@ header {
     padding-right: 10px;
 }
 
+.header-top-icon,
+.header-bottom-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 .notifications span {
     position: absolute;
     margin-top: -20px;
@@ -190,17 +207,6 @@ header {
     color: var(--c-btn-text-badge);
     font-size: 11px;
     font-weight: 400;
-}
-
-.header-top-icon,
-.header-bottom-icon {
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    fill: none;
 }
 
 .header-top-btn.hero p {
@@ -229,6 +235,10 @@ header {
     padding: 10px;
 }
 
+.header-wrap-bottom h1 {
+    font-size: 1.5rem;
+}
+
 .header-wrap-bottom-btns {
     display: flex;
     gap: 8px;
@@ -240,7 +250,7 @@ header {
     grid-area: nav;
     display: flex;
     flex-direction: column;
-    gap: 52px;
+    gap: 72px;
     padding: 10px 10px 10px 16px;
     background-color: var(--c-bg-sidebar);
 }
@@ -268,6 +278,8 @@ header {
     gap: 6px;
     padding: 8px;
     border-radius: var(--r-nav-link-border);
+    font-size: 0.875rem;
+    font-weight: 500;
 }
 
 .nav-links a:hover,
@@ -279,7 +291,7 @@ header {
     width: 24px;
     height: 24px;
     stroke: currentColor;
-    stroke-width: 2;
+    stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
@@ -289,13 +301,17 @@ header {
 
 main {
     grid-area: main;
-    background-color: var(--c-background);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     padding: var(--p-content-grid);
+    background-color: var(--c-background);
 }
 
 main .section-title {
     grid-column: 1 / -1;
     margin-bottom: 8px;
+    font-size: 1.25rem;
 }
 
 /* ==================== stats ==================== */
