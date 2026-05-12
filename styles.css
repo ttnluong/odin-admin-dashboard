@@ -544,9 +544,39 @@ aside .section-title {
 
 /* ==================== messages ==================== */
 
+.aside-section-messages {
+    display: grid;
+    gap: 14px;
+    padding: 10px;
+    border-radius: var(--r-section-border);
+    background-color: var(--c-foreground);
+}
+
+.messages-list {
+    display: grid;
+    gap: var(--g-between-card-list);
+}
+
 .messages-list li {
     display: grid;
     grid-template: auto auto / 1fr auto;
+    gap: 2px;
+    padding: 8px 14px;
+    border: 1px solid var(--c-card-border);
+    border-radius: var(--r-card-border);
+    background-color: var(--c-foreground);
+}
+
+.messages-list h3 {
+    font-size: var(--fs-card-title-sm);
+}
+
+.messages-list p {
+    font-size: var(--fs-card-body-sm);
+}
+
+.messages-list span {
+    font-size: var(--fs-tag);
 }
 
 
