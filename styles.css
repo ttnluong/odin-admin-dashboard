@@ -534,6 +534,7 @@ main .section-title {
     border-radius: 14px;
     border: 1px solid var(--c-btn-border-secondary);
     background-color: var(--c-grey-200);
+    cursor: pointer;
 }
 
 .project-card-action.arrow {
@@ -549,7 +550,7 @@ main .section-title {
 }
 
 .project-card-action:hover {
-    background-color: var(--c-grey-300);
+    background-color: var(--c-grey-400);
 }
 
 .project-action-icon {
@@ -561,6 +562,38 @@ main .section-title {
     stroke-linejoin: round;
     fill: none;
 }
+
+/* preview */
+
+.project-card-action.preview {
+    position: relative;
+}
+
+.screenshot {
+    position: absolute;
+    bottom: 0;          /* Align bottom edge with the icon */
+    right: 140%;       /* Pop out to the LEFT of the icons */
+    width: 450px;      
+    max-width: 60vw;  
+    height: auto;      
+    max-height: 400px; 
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid var(--c-card-border);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    opacity: 0;       
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scale(0.4); 
+    transform-origin: bottom right;
+    z-index: 500;
+}
+
+.project-card-action.preview:hover .screenshot {
+    opacity: 1;
+    transform: scale(1);
+}
+
 
 /* ==================== ASIDE ==================== */
 
