@@ -44,8 +44,11 @@ button {
     --c-grey-800: #424242;
     --c-grey-900: #212121;
 
-    --c-primary-light: #e6f0f1;
-    --c-primary-dark: #4a686a;
+    --c-primary-50: #e6f0f1;
+    --c-primary-100: #c7d7d8;
+    --c-primary-300: #9db9bb;
+    --c-primary-500: #669093;
+    --c-primary-700: #4a686a;
     --c-secondary-light: #feeaa5;
     --c-secondary-dark: #fdb137;
 
@@ -55,7 +58,7 @@ button {
 
     --c-background: var(--c-grey-50);
     --c-foreground: var(--c-white);
-    --c-bg-sidebar: var(--c-primary-light);
+    --c-bg-sidebar: var(--c-primary-50);
     --c-bg-nav-link-hover: var(--c-grey-100);
 
     --c-text-normal: var(--c-black);
@@ -63,9 +66,9 @@ button {
     --c-text-faint: var(--c-grey-400);
     --c-text-hover: var(--c-white);
     
-    --c-card-border: var(--c-grey-200);
+    --c-card-border: var(--c-grey-300);
    
-    --c-btn-bg-primary: var(--c-primary-dark);
+    --c-btn-bg-primary: var(--c-primary-500);
     --c-btn-text-primary: var(--c-white);
     --c-btn-bg-secondary: var(--c-grey-50);
     --c-btn-border-secondary: var(--c-grey-300);
@@ -76,11 +79,12 @@ button {
 
     --c-input-border: var(--c-grey-300);
     --c-input-border-hover: var(--c-grey-200);
-    --c-input-border-focus: var(--c-yellow);
+    --c-input-border-focus: var(--c-primary-300);
     --c-input-text-focus: var(--c-grey-600);
     --c-input-text-placeholder: var(--c-grey-500);
 
-    --c-icon-muted: var(--c-grey-200);
+    --c-icon-muted: var(--c-grey-600);
+    --c-icon-faint: var(--c-grey-400);
     --c-icon-hover: var(--c-grey-400);
 
     --shadow-input: inset 0px 3px 3px -1px #0000000a;
@@ -97,7 +101,7 @@ button {
     --p-card: var(--spacing-md);
 
     --g-between-cards: var(--spacing-md);
-    --g-between-card-list: var(--spacing-xs);
+    --g-between-card-list: var(--spacing-sm);
 
     --radius-sm: 4px;
     --radius-md: 8px;
@@ -107,8 +111,8 @@ button {
     --r-nav-link-border: var(--radius-sm);
     --r-input-border: var(--radius-md);
     --r-btn-border-md: var(--radius-md);
-    --r-card-border: var(--radius-md);
-    --r-section-border: var(--radius-lg);
+    --r-card-border: var(--radius-sm);
+    --r-section-border: var(--radius-md);
 
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -166,8 +170,20 @@ header {
     margin-right: 8px;
 }
 
+.search-icon {
+    margin-left: 8px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    stroke: var(--c-icon-faint);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
 .header-search-bar input {
-    padding: 8px 12px 8px 12px;
+    padding: 8px 12px 8px 34px;
     border: 1px solid var(--c-input-border);
     border-radius: var(--r-input-border);
     color: var(--c-input-text-focus);
@@ -175,6 +191,11 @@ header {
 
 .header-search-bar input::placeholder {
     color: var(--c-input-text-placeholder);
+}
+
+.header-search-bar input:focus {
+    outline: none;
+    border: 1px solid var(--c-input-border-focus);
 }
 
 .header-wrap-top-btns {
@@ -238,7 +259,7 @@ header {
     height: 24px;
     width: 28px;
     margin-left: 3px;
-    background-color: var(--c-primary-dark);
+    background-color: var(--c-primary-700);
     border-radius: 12px;
     font-size: 12px;
     font-weight: 600;
@@ -266,16 +287,15 @@ header {
     grid-area: nav;
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: 74px;
     padding: 10px 10px 10px 16px;
     background-color: var(--c-bg-sidebar);
 }
 
-.logo span {
-    font-family: "Urbanist";
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 1;
+.logo {
+    display: block;
+    height: 28px;
+    color: #272f5e;
 }
 
 .nav-menu {
@@ -291,11 +311,11 @@ header {
 .nav-links a {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 8px;
+    gap: 10px;
+    padding: 10px;
     border-radius: var(--r-nav-link-border);
     font-size: var(--fs-nav-links);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .nav-links a:hover,
@@ -304,13 +324,21 @@ header {
 }
 
 .nav-icon {
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
+    width: 20px;
+    height: 20px;
+    stroke: var(--c-icon-muted);
     stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
+}
+
+.active .nav-icon {
+    fill: var(--c-icon-muted);
+}
+
+.nav-menu hr {
+    border-top: 1px solid #dadbde;
 }
 
 /* ==================== MAIN ==================== */
@@ -328,6 +356,7 @@ main .section-title {
     grid-column: 1 / -1;
     margin-bottom: 2px;
     font-size: var(--fs-section-title);
+    color: var(--c-text-normal);
 }
 
 /* ==================== stats ==================== */
@@ -340,12 +369,17 @@ main .section-title {
 }
 
 .stat-card {
+    position: relative;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 18px;
-    padding: 10px 10px 10px 22px;
-    border-radius: var(--r-card-border);
+    padding: 16px 16px 16px 22px;
+    border-radius: var(--r-section-border);
+    background-color: var(--c-grey-200);
+}
+
+.stat-card:hover {
     background-color: var(--c-foreground);
 }
 
@@ -359,7 +393,7 @@ main .section-title {
     fill: none;
     padding: 10px;
     border-radius: 24px;
-    background-color: var(--c-grey-300);
+    background-color: var(--c-primary-300);
 }
 
 .stat-text {
@@ -370,7 +404,6 @@ main .section-title {
 .stat-text p {
     font-size: var(--fs-card-title-sm);
 }
-
 
 .stat-card a::before {
     content: "";
@@ -394,9 +427,10 @@ main .section-title {
 }
 
 .project-card {
-    display: grid;
-    gap: 10px;
-    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
     border: 1px solid var(--c-card-border);
     border-radius: var(--r-card-border);
     background-color: var(--c-foreground);
@@ -407,14 +441,26 @@ main .section-title {
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2px;
 }
 
-.project-card-tag.figma {
+.project-card-tag {
     padding: 4px 8px;
     border-radius: 16px;
     background-color: #e3e3e3;
     font-size: var(--fs-tag);
+    color: var(--c-icon-muted);
+}
+
+.active {
+    background-color: #c2d4bb;
+}
+
+.ongoing {
+    background-color: #f0e5bd;
+}
+
+.pending {
+    background-color: #d2cbd4;
 }
 
 .project-option-icon {
@@ -425,6 +471,11 @@ main .section-title {
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
+}
+
+.project-card-body {
+    display: grid;
+    gap: 6px;
 }
 
 .project-card h3 {
@@ -439,7 +490,7 @@ main .section-title {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: center;
-    margin-top: 6px;
+    margin-top: auto;
     font-size: var(--fs-card-stat);
 }
 
@@ -448,28 +499,33 @@ main .section-title {
     gap: 12px;
 }
 
-.project-card-stat {
+.project-card-stats > span {
     display: flex;
     gap: 5px;
     line-height: 1.2;
 }
 
+.project-stat-text {
+    color: var(--c-text-muted);
+    word-spacing: -2.5px;
+}
+
 .project-stat-icon {
     width: 16px;
     height: 16px;
-    stroke: currentColor;
+    stroke: var(--c-icon-muted);
     stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
     fill: none;
 }
 
-.project-card-buttons {
+.project-card-actions {
     display: flex;
     gap: 8px;
 }
 
-.project-card-button {
+.project-card-action {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,9 +533,26 @@ main .section-title {
     width: 28px;
     border-radius: 14px;
     border: 1px solid var(--c-btn-border-secondary);
+    background-color: var(--c-grey-200);
 }
 
-.project-button-icon {
+.project-card-action.arrow {
+    background-color: var(--c-btn-bg-primary);
+    color: var(--c-white);
+    border: none;
+}
+
+.project-card-action.arrow:hover {
+    background-color: var(--c-primary-700);
+    color: var(--c-white);
+    border: none;
+}
+
+.project-card-action:hover {
+    background-color: var(--c-grey-300);
+}
+
+.project-action-icon {
     width: 16px;
     height: 16px;
     stroke: currentColor;
@@ -532,14 +605,17 @@ aside .section-title {
 
 .activity-list h3 {
     font-size: var(--fs-card-title-sm);
+    font-weight: 500;
 }
 
 .activity-list p {
     font-size: var(--fs-card-body-sm);
+    color: var(--c-icon-muted);
 }
 
 .activity-list span {
     font-size: var(--fs-tag);
+    color: var(--c-text-faint);
 }
 
 /* ==================== messages ==================== */
