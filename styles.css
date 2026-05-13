@@ -57,7 +57,9 @@ button {
     --c-opacity: 0.85;
 
     --c-background: var(--c-grey-50);
-    --c-foreground: var(--c-white);
+    --c-foreground-primary: var(--c-white);
+    --c-foreground-secondary: var(--c-grey-200);
+    --c-foreground-tertiary: var(--c-primary-100);
     --c-bg-sidebar: var(--c-primary-50);
     --c-bg-nav-link-hover: var(--c-grey-100);
 
@@ -65,6 +67,7 @@ button {
     --c-text-muted: var(--c-grey-600);
     --c-text-faint: var(--c-grey-400);
     --c-text-hover: var(--c-white);
+    --c-text-accent: var(--c-grey-600);
     
     --c-card-border: var(--c-grey-300);
    
@@ -113,6 +116,7 @@ button {
     --br-input-border: var(--border-radius-md);
     --br-btn-border-md: var(--border-radius-md);
     --br-card-border: var(--border-radius-sm);
+    --br-card-border-aside: var(--border-radius-md);
     --br-section-border: var(--border-radius-md);
 
     --font-size-xxs: 0.6875rem; /* 11px */
@@ -125,6 +129,7 @@ button {
     --fs-nav-links: var(--font-size-sm);
     --fs-header-title: var(--font-size-xl);
     --fs-section-title: var(--font-size-lg);
+    --fs-section-title-sm: var(--font-size-md);
     --fs-card-title: var(--font-size-md);
     --fs-card-title-sm: var(--font-size-sm);
     --fs-card-body: var(--font-size-sm);
@@ -156,7 +161,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: var(--c-foreground);
+    background-color: var(--c-foreground-primary);
 }
 
 .header-wrap-top {
@@ -290,7 +295,7 @@ header {
     grid-area: nav;
     display: flex;
     flex-direction: column;
-    gap: 74px;
+    gap: 71px;
     padding: 14px 18px;
     background-color: var(--c-bg-sidebar);
 }
@@ -361,7 +366,7 @@ main .section-title {
     margin-bottom: 2px;
     font-size: var(--fs-section-title);
     letter-spacing: 0.15px;
-    color: var(--c-text-normal);
+    color: var(--c-text-accent);
 }
 
 /* ==================== stats ==================== */
@@ -381,11 +386,11 @@ main .section-title {
     gap: 18px;
     padding: 16px 16px 16px 22px;
     border-radius: var(--br-section-border);
-    background-color: var(--c-grey-200);
+    background-color: var(--c-foreground-secondary);
 }
 
 .stat-card:hover {
-    background-color: var(--c-foreground);
+    background-color: var(--c-foreground-primary);
 }
 
 .stat-icon {
@@ -428,17 +433,17 @@ main .section-title {
     gap: var(--g-between-cards);
     padding: 10px;
     border-radius: var(--br-section-border);
-    background-color: var(--c-foreground);
+    background-color: var(--c-foreground-primary);
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     padding: 16px;
     border: 1px solid var(--c-card-border);
     border-radius: var(--br-card-border);
-    background-color: var(--c-foreground);
+    background-color: var(--c-foreground-primary);
 }
 
 .project-card-header {
@@ -446,6 +451,7 @@ main .section-title {
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
+    margin-top: -4px;
 }
 
 .project-card-tag {
@@ -615,7 +621,8 @@ aside {
 
 aside .section-title {
     margin-bottom: 2px;
-    font-size: var(--fs-section-title);
+    font-size: var(--fs-section-title-sm);
+    color: var(--c-text-accent);
 }
 
 /* ==================== announcements ==================== */
@@ -625,7 +632,7 @@ aside .section-title {
     gap: 14px;
     padding: 10px;
     border-radius: var(--br-section-border);
-    background-color: var(--c-foreground);
+    background-color: var(--c-foreground-secondary);
 }
 
 .activity-list {
@@ -639,14 +646,17 @@ aside .section-title {
     gap: 2px;
     padding: 8px 14px;
     border: 1px solid var(--c-card-border);
-    border-radius: var(--br-card-border);
-    background-color: var(--c-foreground);
+    border-radius: var(--br-card-border-aside);
+    background-color: var(--c-foreground-tertiary);
 }
 
 .activity-list h3 {
     font-size: var(--fs-card-title-sm);
-    font-weight: 500;
-    letter-spacing: 0.1px;
+    font-weight: 400;
+}
+
+.activity-list h3 > strong {
+    font-weight: 600;
 }
 
 .activity-list p {
@@ -666,7 +676,7 @@ aside .section-title {
     gap: 14px;
     padding: 10px;
     border-radius: var(--br-section-border);
-    background-color: var(--c-foreground);
+    background-color: var(--c-foreground-secondary);
 }
 
 .messages-list {
@@ -680,21 +690,23 @@ aside .section-title {
     gap: 2px;
     padding: 8px 14px;
     border: 1px solid var(--c-card-border);
-    border-radius: var(--br-card-border);
-    background-color: var(--c-foreground);
+    border-radius: var(--br-card-border-aside);
+    background-color: var(--c-foreground-tertiary);
 }
 
 .messages-list h3 {
     font-size: var(--fs-card-title-sm);
-    letter-spacing: 0.1px;
+    font-weight: 600;
 }
 
 .messages-list p {
     font-size: var(--fs-card-body-sm);
+    color: var(--c-icon-muted);
 }
 
 .messages-list span {
     font-size: var(--fs-tag);
+    color: var(--c-text-faint);
 }
 
 /* ==================== media queries ==================== */
