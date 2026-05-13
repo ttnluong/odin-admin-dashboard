@@ -89,49 +89,48 @@ button {
 
     --shadow-input: inset 0px 3px 3px -1px #0000000a;
 
-    --spacing-50: 2px;
-    --spacing-75: 4px;
-    --spacing-100: 8px;
-    --spacing-200: 12px;
-    --spacing-300: 16px;
-    --spacing-400: 24px;
-    --spacing-500: 32px;
+    --spacing-xxs: 2px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 24px;
+    --spacing-xxl: 32px;
 
-    --p-page-grid: var(--spacing-200);
-    --p-content-grid: var(--spacing-200);
-    --p-card: var(--spacing-200);
+    --p-page-grid: var(--spacing-md);
+    --p-content-grid: var(--spacing-md);
+    --p-card: var(--spacing-md);
 
-    --g-between-cards: var(--spacing-200);
-    --g-between-card-list: var(--spacing-100);
+    --g-between-cards: var(--spacing-md);
+    --g-between-card-list: var(--spacing-sm);
 
-    --corner-radius-75: 3px;
-    --corner-radius-100: 4px;
-    --corner-radius-300: 6px;
-    --corner-radius-500: 8px;
-    --corner-radius-700: 10px;
+    --border-radius-xs: 3px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
 
-    --cr-nav-link-border: var(--corner-radius-100);
-    --cr-input-border: var(--corner-radius-500);
-    --cr-btn-border-md: var(--corner-radius-500);
-    --cr-card-border: var(--corner-radius-100);
-    --cr-section-border: var(--corner-radius-500);
+    --br-nav-link-border: var(--border-radius-sm);
+    --br-input-border: var(--border-radius-md);
+    --br-btn-border-md: var(--border-radius-md);
+    --br-card-border: var(--border-radius-sm);
+    --br-section-border: var(--border-radius-md);
 
-    --font-size-50: 0.6875rem; /* 11px */
-    --font-size-75: 0.75rem; /* 12px */
-    --font-size-100: 0.875rem; /* 14px */
-    --font-size-200: 1rem; /* 16px */
-    --font-size-400: 1.25rem; /* 20px */
-    --font-size-600: 1.5625rem; /* 25px */
+    --font-size-xxs: 0.6875rem; /* 11px */
+    --font-size-xs: 0.75rem; /* 12px */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-md: 1rem; /* 16px */
+    --font-size-lg: 1.25rem; /* 20px */
+    --font-size-xl: 1.5625rem; /* 25px */
 
-    --fs-nav-links: var(--font-size-100);
-    --fs-header-title: var(--font-size-600);
-    --fs-section-title: var(--font-size-400);
-    --fs-card-title: var(--font-size-200);
-    --fs-card-title-sm: var(--font-size-100);
-    --fs-card-body: var(--font-size-100);
-    --fs-card-body-sm: var(--font-size-75);
-    --fs-tag: var(--font-size-75);
-    --fs-card-stat: var(--font-size-75);
+    --fs-nav-links: var(--font-size-sm);
+    --fs-header-title: var(--font-size-xl);
+    --fs-section-title: var(--font-size-lg);
+    --fs-card-title: var(--font-size-md);
+    --fs-card-title-sm: var(--font-size-sm);
+    --fs-card-body: var(--font-size-sm);
+    --fs-card-body-sm: var(--font-size-xs);
+    --fs-tag: var(--font-size-xxs);
+    --fs-card-stat: var(--font-size-xs);
 
 }
 
@@ -188,7 +187,7 @@ header {
 .header-search-bar input {
     padding: 8px 12px 8px 34px;
     border: 1px solid var(--c-input-border);
-    border-radius: var(--cr-input-border);
+    border-radius: var(--br-input-border);
     color: var(--c-input-text-focus);
 }
 
@@ -214,7 +213,7 @@ header {
     gap: 6px;
     padding: 4px;
     border: 1px solid var(--c-btn-border-secondary);
-    border-radius: var(--cr-btn-border-md);
+    border-radius: var(--br-btn-border-md);
     background-color: var(--c-btn-bg-secondary);
 }
 
@@ -249,13 +248,13 @@ header {
     font-weight: 400;
 }
 
-.header-top-btn.hero p {
+.header-top-btn.user p {
     padding-right: 8px;
     font-weight: 600;
     color: var(--c-btn-text-user);
 }
 
-.hero .initials {
+.user .avatar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,7 +291,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 74px;
-    padding: 10px 10px 10px 16px;
+    padding: 14px 18px;
     background-color: var(--c-bg-sidebar);
 }
 
@@ -317,9 +316,9 @@ header {
     align-items: center;
     gap: 10px;
     padding: 6px 10px;
-    border-radius: var(--cr-nav-link-border);
+    border-radius: var(--br-nav-link-border);
     font-size: var(--fs-nav-links);
-    font-weight: 400;
+    font-weight: 350;
 }
 
 .nav-links a:hover,
@@ -328,8 +327,9 @@ header {
 }
 
 .nav-icon {
-    width: 20px;
-    height: 20px;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
     stroke: var(--c-icon-muted);
     stroke-width: 1.5;
     stroke-linecap: round;
@@ -380,7 +380,7 @@ main .section-title {
     align-items: center;
     gap: 18px;
     padding: 16px 16px 16px 22px;
-    border-radius: var(--cr-section-border);
+    border-radius: var(--br-section-border);
     background-color: var(--c-grey-200);
 }
 
@@ -427,7 +427,7 @@ main .section-title {
     grid-template: auto / repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--g-between-cards);
     padding: 10px;
-    border-radius: var(--cr-section-border);
+    border-radius: var(--br-section-border);
     background-color: var(--c-foreground);
 }
 
@@ -437,7 +437,7 @@ main .section-title {
     gap: 14px;
     padding: 16px;
     border: 1px solid var(--c-card-border);
-    border-radius: var(--cr-card-border);
+    border-radius: var(--br-card-border);
     background-color: var(--c-foreground);
 }
 
@@ -485,12 +485,10 @@ main .section-title {
 
 .project-card h3 {
     font-size: var(--fs-card-title);
-    letter-spacing: 0.15px;
 }
 
 .project-card p {
     font-size: var(--fs-card-body);
-    letter-spacing: 0.25px;
 }
 
 .project-card-footer {
@@ -626,7 +624,7 @@ aside .section-title {
     display: grid;
     gap: 14px;
     padding: 10px;
-    border-radius: var(--cr-section-border);
+    border-radius: var(--br-section-border);
     background-color: var(--c-foreground);
 }
 
@@ -641,7 +639,7 @@ aside .section-title {
     gap: 2px;
     padding: 8px 14px;
     border: 1px solid var(--c-card-border);
-    border-radius: var(--cr-card-border);
+    border-radius: var(--br-card-border);
     background-color: var(--c-foreground);
 }
 
@@ -667,7 +665,7 @@ aside .section-title {
     display: grid;
     gap: 14px;
     padding: 10px;
-    border-radius: var(--cr-section-border);
+    border-radius: var(--br-section-border);
     background-color: var(--c-foreground);
 }
 
@@ -682,7 +680,7 @@ aside .section-title {
     gap: 2px;
     padding: 8px 14px;
     border: 1px solid var(--c-card-border);
-    border-radius: var(--cr-card-border);
+    border-radius: var(--br-card-border);
     background-color: var(--c-foreground);
 }
 
@@ -698,6 +696,8 @@ aside .section-title {
 .messages-list span {
     font-size: var(--fs-tag);
 }
+
+/* ==================== media queries ==================== */
 
 
 @media screen and (width <= 1000px) {
