@@ -13,7 +13,7 @@
         <!-- header -->
         <header>
             <div class="header-wrap-top">
-                <!-- <button id="menu-toggle">menutoggle</button> -->
+                <button class="header-top-btn sidebar-toggle" id="sidebar-toggle" onclick="openSidebar()"><svg class="header-top-icon"><use href="/svg/feather-sprite.svg#menu"></svg></button>
                 <div class="header-search-bar">
                     <input type="text" placeholder="Search...">
                     <svg class="search-icon"><use href="/svg/feather-sprite.svg#search"></svg>
@@ -40,7 +40,7 @@
             </div>
         </header>
         <!-- sidebar -->
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav" id="sidebar">
             <div class="logo-wrap">
                 <svg class="logo"><use href="/svg/logo.svg"></use></svg>
             </div>
@@ -248,15 +248,15 @@
                 <h2 class="section-title">Recent activity</h2>
                 <ul class="activity-list">
                     <li>
-                        <h3><strong>Bob</strong> added a task in <strong>Bolo</strong></h3><span>today</span>
+                        <h3 class="truncate"><strong>Bob</strong> added a task in <strong>Bolo</strong></h3><span>today</span>
                         <p class="truncate">Logo Design added to Bolo and some more text check</p>
                     </li>
                     <li>
-                        <h3><strong>Bob</strong> left a comment on <strong>Bolo</strong></h3><span>today</span>
+                        <h3 class="truncate"><strong>Bob</strong> left a comment on <strong>Bolo</strong></h3><span>today</span>
                         <p class="truncate">This is a new proposal for bla bla bla</p>
                     </li>
                     <li>
-                        <h3><strong>Bob</strong> added a task in <strong>Bolo</strong></h3><span>today</span>
+                        <h3 class="truncate"><strong>Bob</strong> added a task in <strong>Bolo</strong></h3><span>today</span>
                         <p class="truncate">Logo Design added to Bolo words words words</p>
                     </li>
                 </ul>

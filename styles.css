@@ -169,8 +169,12 @@ header {
 
 .header-wrap-top {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     padding: var(--p-page-grid);
+}
+
+.sidebar-toggle {
+    margin-right: 6px;
 }
 
 .header-search-bar {
@@ -298,6 +302,7 @@ header {
     grid-area: nav;
     display: flex;
     flex-direction: column;
+    min-width: 200px;
     gap: 71px;
     padding: 14px 18px;
     background-color: var(--c-bg-sidebar);
@@ -351,6 +356,11 @@ header {
 
 .nav-menu hr {
     border-top: 1px solid #dadbde;
+}
+
+.open {
+    display: block;
+    width: 200px;
 }
 
 /* ==================== MAIN ==================== */
@@ -616,6 +626,7 @@ aside {
     grid-area: aside;
     display: flex;
     flex-direction: column;
+    min-width: 240px;
     gap: 16px;
     padding: 12px 12px 12px 4px;
     background-color: var(--c-background);
@@ -653,6 +664,10 @@ aside .section-title {
 }
 
 .activity-list h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 6px;
     font-size: var(--fs-card-title-sm);
     font-weight: 450;
 }
@@ -718,13 +733,9 @@ aside .section-title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    padding-right: 4px;
+    padding-right: 6px;
     font-size: var(--fs-card-body-sm);
     color: var(--c-text-muted-on-color);
-}
-
-.messages-list p span {
-    display: inline-block;
 }
 
 .messages-list h3 + span {
@@ -735,9 +746,50 @@ aside .section-title {
 /* ==================== media queries ==================== */
 
 
+
+@media (width >= 1024px) {
+   .sidebar-toggle {
+    display: none;
+    }
+
+    .header-search-bar {
+    grid-column: 1 / span 2;
+    }
+}
+
 @media (width <= 1024px) {
    .main-section-stats { 
     grid-template-columns: repeat(2, minmax(160px, 1fr));
+   }
+
+   .sidebar-nav {
+    z-index: 2;
+    margin-left: -200px;
+   }
+
+   header {
+    grid-column: 1 / span 3;
+   }
+
+   main {
+    grid-column: 1 / span 2;
+   }
+
+}
+
+@media (width <= 768px) {
+   .main-section-stats { 
+    grid-template-columns: repeat(2, minmax(160px, 1fr));
+   }
+
+   main {
+    grid-column: 1 / span 3;
+   }
+
+   aside {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 2;
+    padding: 12px;
    }
 
 }
