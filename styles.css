@@ -45,10 +45,12 @@ button {
     --c-grey-900: #212121;
 
     --c-primary-50: #e6f0f1;
+    --c-primary-75: #d3dedf;
     --c-primary-100: #c7d7d8;
     --c-primary-300: #9db9bb;
     --c-primary-500-default: #669093;
     --c-primary-700: #4a686a;
+    --c-primary-800: #0D6A6D;
     --c-secondary-light: #feeaa5;
     --c-secondary-dark: #fdb137;
 
@@ -59,15 +61,16 @@ button {
     --c-background: var(--c-grey-50);
     --c-foreground-primary: var(--c-white);
     --c-foreground-secondary: var(--c-grey-200);
-    --c-foreground-tertiary: var(--c-primary-100);
+    --c-foreground-tertiary: var(--c-primary-75);
     --c-bg-sidebar: var(--c-primary-50);
-    --c-bg-nav-link-hover: var(--c-grey-100);
+    --c-bg-nav-link-hover: var(--c-grey-50);
 
     --c-text-normal: var(--c-black);
     --c-text-muted: var(--c-grey-600);
+    --c-text-muted-on-color: var(--c-grey-700);
     --c-text-faint: var(--c-grey-400);
     --c-text-hover: var(--c-white);
-    --c-text-accent: var(--c-grey-600);
+    --c-text-accent: var(--c-primary-800);
     
     --c-card-border: var(--c-grey-300);
    
@@ -289,7 +292,7 @@ header {
     gap: 8px;
 }
 
-/* ==================== SIDEBAR ==================== */
+/* ==================== SIDEBAR NAV ==================== */
 
 .sidebar-nav {
     grid-area: nav;
@@ -365,8 +368,7 @@ main .section-title {
     grid-column: 1 / -1;
     margin-bottom: 2px;
     font-size: var(--fs-section-title);
-    letter-spacing: 0.15px;
-    color: var(--c-text-accent);
+    color: var(--c-text-muted);
 }
 
 /* ==================== stats ==================== */
@@ -622,7 +624,7 @@ aside {
 aside .section-title {
     margin-bottom: 2px;
     font-size: var(--fs-section-title-sm);
-    color: var(--c-text-accent);
+    color: var(--c-text-muted);
 }
 
 /* ==================== announcements ==================== */
@@ -630,7 +632,7 @@ aside .section-title {
 .aside-section-activity {
     display: grid;
     gap: 14px;
-    padding: 10px;
+    padding: 10px 10px 16px;
     border-radius: var(--br-section-border);
     background-color: var(--c-foreground-secondary);
 }
@@ -657,16 +659,17 @@ aside .section-title {
 
 .activity-list h3 > strong {
     font-weight: 600;
+    color: var(--c-text-accent);
 }
 
 .activity-list p {
     font-size: var(--fs-card-body-sm);
-    color: var(--c-icon-muted);
+    color: var(--c-text-muted-on-color);
 }
 
 .activity-list span {
     font-size: var(--fs-tag);
-    color: var(--c-text-faint);
+    color: var(--c-text-muted);
 }
 
 /* ==================== messages ==================== */
@@ -674,7 +677,7 @@ aside .section-title {
 .aside-section-messages {
     display: grid;
     gap: 14px;
-    padding: 10px;
+    padding: 10px 10px 16px;
     border-radius: var(--br-section-border);
     background-color: var(--c-foreground-secondary);
 }
@@ -697,16 +700,17 @@ aside .section-title {
 .messages-list h3 {
     font-size: var(--fs-card-title-sm);
     font-weight: 600;
+    color: var(--c-text-accent);
 }
 
 .messages-list p {
     font-size: var(--fs-card-body-sm);
-    color: var(--c-icon-muted);
+    color: var(--c-text-muted-on-color);
 }
 
 .messages-list span {
     font-size: var(--fs-tag);
-    color: var(--c-text-faint);
+    color: var(--c-text-muted);
 }
 
 /* ==================== media queries ==================== */
