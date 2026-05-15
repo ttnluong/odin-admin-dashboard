@@ -470,14 +470,13 @@ main .section-title {
     padding: 4px 8px;
     border-radius: 16px;
     font-size: var(--fs-tag);
+    word-spacing: -1px;
+    background-color: #e3e3e3;
     color: var(--c-icon-muted);
 }
 
-.tag-subject {
-    background-color: #e3e3e3;
-}
-
-.tag-active {
+.tag-active,
+.tag-completed {
     background-color: #c2d4bb;
 }
 
@@ -735,6 +734,7 @@ aside .section-title {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     padding-right: 6px;
     font-size: var(--fs-card-body-sm);
