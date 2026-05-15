@@ -8,10 +8,15 @@
 // });
 
 const text = document.querySelectorAll(".truncate");
+const textheading = document.querySelectorAll(".truncate.activity-heading");
 
 text.forEach(p => {
   p.innerHTML = p.textContent.replace(/[a-z0-9_]+/g, '<span>$&</span>');
  });
+
+textheading.forEach(p => {
+  p.innerHTML = p.textContent.replace(/\b[a-z]*[A-Z][a-zA-Z0-9_]*\b/g, '<strong><span>$&</span></strong>');
+});
 
 
  // sidebar toggle button

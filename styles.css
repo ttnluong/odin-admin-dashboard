@@ -759,7 +759,6 @@ aside .section-title {
     .header-search-bar {
     grid-column: 1 / span 2;
     }
-    
 }
 
 @media (width <= 1160px) {
@@ -773,10 +772,9 @@ aside .section-title {
    }
 
    .sidebar-nav.active {
-    z-index: 3;
+    z-index: 2;
     margin-left: 0px;
    }
-
 
    header {
     grid-column: 1 / span 3;
@@ -785,7 +783,6 @@ aside .section-title {
    main {
     grid-column: 1 / span 2;
    }
-
 }
 
 @media (width <= 768px) {
@@ -802,5 +799,4 @@ aside .section-title {
     grid-row: 3 / span 2;
     padding: 12px;
    }
-
 }
