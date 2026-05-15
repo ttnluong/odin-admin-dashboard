@@ -10,34 +10,24 @@
 const text = document.querySelectorAll(".truncate");
 
 text.forEach(p => {
-  p.innerHTML = p.textContent.replace(/\w+/g, '<span>$&</span>');
+  p.innerHTML = p.textContent.replace(/[a-z0-9_]+/g, '<span>$&</span>');
  });
 
 
  // sidebar toggle button
 
-//  function openSidebar() {
-//   document.getElementById("sidebar").style.marginLeft = "0px";
-// }
+const toggleButton = document.getElementById("sidebar-toggle");
+const sidebar = document.querySelector(".sidebar-nav");
 
-// function closeSidebar() {
-//   document.getElementById("sidebar").style.display = "none";
-// }
+toggleButton.addEventListener("click", () => {
+  const isActive = sidebar.classList.toggle("active");
+  toggleButton.setAttribute("aria-expanded", String(isActive));
+});
 
-// function openSidebar() {
-//   var element = document.getElementById("sidebar");
-//   element.classList.add("open");
-// }
-
-const toggleButton = document.querySelector('#sidebar-toggle');
-
-toggleButton.addEventListener('click', () => {
-  var el = document.getElementById("sidebar");
-  el.style.marginLeft = "0px";
-})
-
-document.body.addEventListener('click', () => {
-  document.getElementById("sidebar").style.marginLeft = "-200px";
-})
-
+document.addEventListener("click", (event) => {
+  if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+    sidebar.classList.remove("active");
+    toggleButton.setAttribute("aria-expanded", "false");
+  }
+});
 
