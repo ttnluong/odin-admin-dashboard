@@ -158,13 +158,17 @@ body {
     grid-template-areas:
     "nav header header"
     "nav main aside";
+    overflow: auto;
 }
 
 /* ==================== HEADER ==================== */
 
 header {
+    position: sticky;
+    top: 0;
     grid-area: header;
     background-color: var(--c-foreground-primary);
+    z-index: 2;
 }
 
 .header-wrap-top {
@@ -299,6 +303,9 @@ header {
 /* ==================== SIDEBAR NAV ==================== */
 
 .sidebar-nav {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     grid-area: nav;
     display: flex;
     flex-direction: column;
@@ -306,6 +313,7 @@ header {
     gap: 71px;
     padding: 14px 18px;
     background-color: var(--c-bg-sidebar);
+    z-index: 2;
 }
 
 .logo {
@@ -767,12 +775,10 @@ aside .section-title {
    }
 
    .sidebar-nav {
-    z-index: 2;
     margin-left: -200px;
    }
 
    .sidebar-nav.active {
-    z-index: 2;
     margin-left: 0px;
    }
 
