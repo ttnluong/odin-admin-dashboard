@@ -1,22 +1,11 @@
 // Truncate text, ellipsis after whole word
 
 const text = document.querySelectorAll(".truncate");
-const textHeading = document.querySelectorAll(".truncate.activity-heading");
 
 text.forEach(p => {
-  p.innerHTML = p.textContent.replace(/[a-z0-9_]+/g, '<span>$&</span>');
+  p.innerHTML = p.textContent.replace(/\w+/g, '<span>$&</span>');
  });
-
-textHeading.forEach(p => {
-  p.innerHTML = p.textContent.replace(/[a-zA-Z0-9_.]+/g, match => {
-      if (/[A-Z.]/.test(match)) {
-        return `<strong><span>${match}</span></strong>`;
-      } else {
-        return `<span>${match}</span>`;
-      }
-    });
-});
-
+ 
 
  // Sidebar toggle button
 
