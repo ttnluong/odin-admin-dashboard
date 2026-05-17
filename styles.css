@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Inter Variable";
-    src: url("/fonts/Inter-Variable.woff2") format("woff2-variations");
+    src: url("./fonts/Inter-Variable.woff2") format("woff2-variations");
     font-weight: 100 900;
     font-stretch: 50% 150%;
     font-display: swap;
