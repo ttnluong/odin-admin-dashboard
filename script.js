@@ -8,7 +8,13 @@ text.forEach(p => {
  });
 
 textHeading.forEach(p => {
-  p.innerHTML = p.textContent.replace(/\b[a-z]*[A-Z][a-zA-Z0-9_]*\b/g, '<strong><span>$&</span></strong>');
+  p.innerHTML = p.textContent.replace(/[a-zA-Z0-9_.]+/g, match => {
+      if (/[A-Z.]/.test(match)) {
+        return `<strong><span>${match}</span></strong>`;
+      } else {
+        return `<span>${match}</span>`;
+      }
+    });
 });
 
 
