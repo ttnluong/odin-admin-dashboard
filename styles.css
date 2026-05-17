@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Inter Variable";
     src: url("./fonts/Inter-Variable.woff2") format("woff2-variations"),
+         url("./fonts/Inter-Variable.woff") format("woff-variations"),
          url("./fonts/Inter-Variable.ttf") format("truetype");
     font-weight: 100 900;
     font-stretch: 50% 150%;
@@ -47,7 +48,7 @@ button {
 
     --c-primary-50: #e6f0f1;
     --c-primary-75: #d3dedf;
-    --c-primary-100: #c7d7d8;
+    --c-primary-100: #b7cdcf;
     --c-primary-300: #9db9bb;
     --c-primary-500-default: #669093;
     --c-primary-700: #4a686a;
@@ -238,6 +239,11 @@ header {
     padding-right: 10px;
 }
 
+.header-top-btn:hover,
+.header-bottom-btn:hover {
+    background-color: var(--c-grey-300);
+}
+
 .header-top-icon,
 .header-bottom-icon {
     width: 24px;
@@ -411,7 +417,7 @@ main .section-title {
 }
 
 .stat-card:hover {
-    background-color: var(--c-foreground-primary);
+    background-color: var(--c-grey-300);
 }
 
 .stat-icon {
@@ -460,11 +466,15 @@ main .section-title {
 .project-card {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     padding: 16px;
     border: 1px solid var(--c-card-border);
     border-radius: var(--br-card-border);
     background-color: var(--c-foreground-primary);
+}
+
+.project-card:hover {
+    box-shadow: #63636333 0px 2px 4px 0px;
 }
 
 .project-card-header {
@@ -472,11 +482,17 @@ main .section-title {
     grid-template-columns: auto auto;
     justify-content: space-between;
     align-items: center;
-    margin-top: -4px;
+    margin-top: -2px;
+}
+
+.project-card-tags {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .project-card-tag {
-    padding: 4px 8px;
+    padding: 3px 8px;
     border-radius: 16px;
     font-size: var(--fs-tag);
     word-spacing: -1px;
@@ -495,6 +511,16 @@ main .section-title {
 
 .tag-pending {
     background-color: #d2cbd4;
+}
+
+.project-tag-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #eedc9d;
+    stroke-width: 2;
+    stroke-linecap: square;
+    stroke-linejoin: square;
+    fill: #eedc9d;
 }
 
 .project-option-icon {
@@ -599,6 +625,10 @@ main .section-title {
     fill: none;
 }
 
+.project-action-icon.star-active {
+    fill: var(--c-black);
+}
+
 /* preview */
 
 .project-card-action.preview {
@@ -674,6 +704,11 @@ aside .section-title {
     background-color: var(--c-foreground-tertiary);
 }
 
+.activity-list li:hover {
+    cursor: pointer;
+    background-color: var(--c-primary-100);
+}
+
 .activity-list h3 {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -731,6 +766,11 @@ aside .section-title {
     border: 1px solid var(--c-card-border);
     border-radius: var(--br-card-border-aside);
     background-color: var(--c-foreground-tertiary);
+}
+
+.messages-list li:hover {
+    cursor: pointer;
+    background-color: var(--c-primary-100);
 }
 
 .messages-list h3 {
