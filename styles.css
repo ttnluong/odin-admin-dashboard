@@ -156,7 +156,7 @@ body {
 .container {
     height: 100%;
     display: grid;
-    grid-template: auto 1fr / 0.7fr 3fr 1fr;
+    grid-template: auto 1fr / 0.6fr 3fr 1fr;
     grid-template-areas:
     "nav header header"
     "nav main aside";
@@ -188,6 +188,7 @@ header {
     align-items: center;
     max-width: 600px;
     margin-right: 8px;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 1px 0px rgba(255, 255, 255, 0.25);
 }
 
 .search-icon {
@@ -233,6 +234,8 @@ header {
     border: 1px solid var(--c-btn-border-secondary);
     border-radius: var(--br-btn-border-md);
     background-color: var(--c-btn-bg-secondary);
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0px 1px 0px rgba(27, 31, 35, 0.04), inset 0px 1px 0px rgba(255, 255, 255, 0.25);
 }
 
 .header-bottom-btn {
@@ -241,7 +244,8 @@ header {
 
 .header-top-btn:hover,
 .header-bottom-btn:hover {
-    background-color: var(--c-grey-300);
+    border-color: var(--c-grey-300);
+    background-color: var(--c-grey-200);
 }
 
 .header-top-icon,
@@ -474,7 +478,8 @@ main .section-title {
 }
 
 .project-card:hover {
-    box-shadow: #63636333 0px 2px 4px 0px;
+    cursor: default;
+    box-shadow: 0px 2px 4px 0px rgba(99 99 99 / 20%) ;
 }
 
 .project-card-header {
@@ -637,8 +642,8 @@ main .section-title {
 
 .screenshot {
     position: absolute;
-    bottom: 0;          /* Align bottom edge with the icon */
-    right: 140%;       /* Pop out to the LEFT of the icons */
+    bottom: 140%;
+    right: 80%;
     width: 450px;      
     max-width: 60vw;  
     height: auto;      
@@ -646,10 +651,10 @@ main .section-title {
     object-fit: contain;
     border-radius: 8px;
     border: 1px solid var(--c-card-border);
-    box-shadow: 0 2px 10px #00000033;
+    box-shadow: 0 2px 10px rgba(0 0 0 / 20%);
     opacity: 0;       
     pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
     transform: scale(0.4); 
     transform-origin: bottom right;
     z-index: 500;
