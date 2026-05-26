@@ -505,12 +505,9 @@ main .section-title {
     color: var(--c-icon-muted);
 }
 
-.tag-active {
+.tag-active,
+.tag-completed  {
     background-color: #c8dcc3;  /* #d1e2b3 #c2d4bb */
-}
-
-.tag-completed {
-    background-color: #c8dcc3;
 }
 
 .tag-ongoing {
